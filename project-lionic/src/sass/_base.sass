@@ -1,10 +1,28 @@
 $color-btn: #3172b9
 $color-card-do: #4086d3
 $color-font-text: #787878
-$color-font-title: #1c1c1c
+$color-font-title: #414141
 
 $fonts-size-text: 1.6rem
 $fonts-sise-title: 3.6rem
+
+@font-face
+    font-family: 'Open Sans'
+    font-style: normal
+    font-weight: 300
+    src: local(''), url('../fonts/open-sans-v34-latin-300.woff2') format('woff2'), url('../fonts/open-sans-v34-latin-300.woff') format('woff')
+
+@font-face
+    font-family: 'Open Sans'
+    font-style: normal
+    font-weight: 400
+    src: local(''), url('../fonts/open-sans-v34-latin-regular.woff2') format('woff2'), url('../fonts/open-sans-v34-latin-regular.woff') format('woff')
+
+@font-face
+    font-family: 'Open Sans'
+    font-style: normal
+    font-weight: 600
+    src: local(''), url('../fonts/open-sans-v34-latin-600.woff2') format('woff2'), url('../fonts/open-sans-v34-latin-600.woff') format('woff')
 
 *, ::after, ::before
     margin: 0
@@ -16,7 +34,7 @@ html
     scroll-behavior: smooth
 
 body
-    font-family: 'Open sans', sans-serif
+    font-family: 'Open Sans', sans-serif
     font-weight: 400
     font-size: $fonts-size-text
     line-height: 2.5rem
@@ -31,6 +49,9 @@ a
 
 img
     max-width: 100%
+
+button
+    border: none
 
 .container
     width: 120rem
