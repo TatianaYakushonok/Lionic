@@ -1,23 +1,43 @@
 .do
-    padding: 22.5rem 0 19.8rem
-    border-bottom: .1rem solid #dadada
+    //padding: 22.5rem 0 19.8rem
+    //border-bottom: .1rem solid #dadada
     &__title
         margin-bottom: 3.7rem
     &__description
         margin-bottom: 5.2rem
     &__list
         display: flex
-        justify-content: space-between
         gap: 3rem
+        flex-wrap: wrap
     &__item
-        flex: 1 1 25%
+        flex: 1 1 20%
         padding: 6.2rem 2.7rem
         border-radius: .5rem
         border: .1rem solid #e4e4e4
+        transition-property: background-color, color
+        transition-duration: .5s
+        transition-timing-function: ease
+        @include respond(tab-land)
+            flex: 1 1 30%
+        @include respond(tab-port)
+            flex: 1 1 40%
+        @include respond(phone)
+            flex: 1 1 50%
+        &:hover
+            color: #fff
+            background-color: $color-card-do
+            cursor: pointer
+        &:hover .do__link--title
+            color: #fff
+        &:hover .do__icon path
+            fill: #fff
     &__icon
         margin-bottom: 3.4rem
+    &__icon path
+        transition: fill .5s ease
     &__link--title
         margin-bottom: 2rem
+        transition: color .5s ease
     &__link--description
         font-size: 1.4rem
         line-height: 2.1rem

@@ -4,6 +4,9 @@
         display: flex
         align-items: center
         justify-content: space-between
+        @include respond(tab-land)
+            flex-direction: column-reverse
+        gap: 3rem
     &__left
         display: flex
         align-items: center
@@ -15,15 +18,28 @@
         display: flex
         align-items: center
         gap: 6.8rem
+        @include respond(tab-port)
+            flex-direction: column-reverse
+            gap: 3rem
     &__nav
         &--list
             display: flex
             gap: 4rem
+            @include respond(phone)
+                flex-direction: column
+                align-items: center
         &--link
             font-size: 1.4rem
             line-height: 1
             color: $color-font-text
+            transition: color .3s ease
+            &:hover
+                color: $color-btn
     &__icon--container
         display: flex
         align-items: center
         gap: 3.1rem
+    &__icon path
+        transition: fill .3s ease
+    &__icon--link:hover .footer__icon path
+        fill: $color-btn

@@ -2,6 +2,9 @@
     display: flex
     align-items: center
     justify-content: center
+    @include respond(tab-land)
+        flex-direction: column
+        gap: 2rem
     &__input
         width: 25.1rem
         padding: 2.4rem 3rem
@@ -21,8 +24,12 @@
         transition: all .3s ease
     &__input:not(:nth-child(3))
         margin-right: 1.9rem
+        @include respond(tab-land)
+            margin-right: 0
     &__btn
         margin-left: 3.2rem
         padding: 2.4rem 6.4rem
         font-weight: 400
         border-radius: 10rem
+        @include respond(tab-land)
+            margin-left: 0

@@ -54,6 +54,14 @@ button
     border: none
 
 .container
-    width: 120rem
+    max-width: 120rem
     margin: 0 auto
     padding: 0 1.5rem
+
+.section
+    padding: 12rem 0 15rem
+    border-bottom: .1rem solid #dadada
+    @include respond(tab-port)
+        padding: 6rem 0
+    @include respond(phone)
+        padding: 3rem 0

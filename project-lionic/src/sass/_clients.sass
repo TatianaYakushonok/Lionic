@@ -1,13 +1,16 @@
 .clients
-    padding: 9.8rem 0 16.1rem
-    border-bottom: .1rem solid #dadada
+    //padding: 9.8rem 0 16.1rem
+    //border-bottom: .1rem solid #dadada
     &__title
         margin-bottom: 4.3rem
+        @include respond(phone)
+            text-align: center
     &__list
         display: flex
         gap: 3rem
+        flex-wrap: wrap
     &__item
-        flex: 1 1 33.33%
+        flex: 1 1 25%
         display: flex
         flex-direction: column
         justify-content: space-between
@@ -15,6 +18,10 @@
         font-size: 1.4rem
         border-radius: .5rem
         border: .1rem solid #e4e4e4
+        @include respond(tab-land)
+            flex: 1 1 40%
+        @include respond(tab-port)
+            flex: 1 1 50%
         &--decription
             padding-bottom: 3rem
         &--container
@@ -22,6 +29,11 @@
             display: flex
             align-items: center
             border-top: .1rem solid #dadada
+            @include respond(phone)
+                flex-direction: column
+                justify-content: center
+                gap: 2rem
+                text-align: center
         &--avatar
             width: 6.2rem
             height: 6.2rem
@@ -29,6 +41,8 @@
             border-radius: 50%
             border: .2rem solid $color-btn
             background-color: #3F3F3F
+            @include respond(phone)
+                margin-right: 0
         &--container-name
             display: flex
             flex-direction: column

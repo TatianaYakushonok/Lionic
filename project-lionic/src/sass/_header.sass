@@ -6,7 +6,8 @@
         align-items: center
     &__btn
         margin-left: 8.5rem
-
+        @include respond(phone)
+            display: none !important
 .logo
     display: inline-block
     margin-right: auto
